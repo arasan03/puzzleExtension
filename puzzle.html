@@ -1,0 +1,31 @@
+<DOCTYPE html>
+
+<html>
+    <head>
+     <meta charset="utf-8"/>
+
+         <link rel="stylesheet" type="text/css" href="puzzlecss.css"/>
+        <title>Sliding Puzzle</title>
+    </head>
+
+    <body>
+      <h1>SlidingPuzzle </h1>
+
+        <div id="puzzleGrid"></div><br/><br/>
+
+		<button id="undoButton" onclick="undo()" disabled>Undo</button>
+		<button onclick="prepare()">New Game</button>
+
+
+
+        <div id="overlay"></div>
+        <div id="solvedPopup">
+            <h2>Yes You won!</h2>
+            <p>Required moves: <span id="requiredMovesLabel"></span></p>
+            <button onclick="solvedPopup.close()">Close</button>
+            <button onclick="solvedPopup.close();prepare();">New Game</button>
+        </div>
+    <script src="puzzlejava.js" type="application/javascript"></script>
+
+    </body>
+</html>

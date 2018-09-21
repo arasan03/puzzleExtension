@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "Lets slide it",
+  "version": "1.0",
+  "description": "play simple puzzle game while browsing internet",
+
+  "icons": {
+    "48": "icons/puzzle.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/puzzle.png",
+    "default_title": "slidding puzzle",
+    "default_popup": "puzzle.html",
+    "browser_style": false
+  },
+  "permissions": ["storage"],
+
+  "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["puzzlejava.js"]
+      }
+    ]
+}
